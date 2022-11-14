@@ -13,7 +13,7 @@ frontend:
         - ls -la .next/standalone/.next/cache
         - ls -la .next/standalone/.next/cache/images
   artifacts:
-    baseDirectory: build
+    baseDirectory: .next
     files:
       - "**/*"
   cache:
