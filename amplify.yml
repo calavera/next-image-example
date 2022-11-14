@@ -9,6 +9,9 @@ frontend:
         - npm run build
         - mkdir -p .next/standalone/.next/cache/images
         - touch .next/standalone/.next/cache/images/.keep
+        - ls -la .next/standalone/.next
+        - ls -la .next/standalone/.next/cache
+        - ls -la .next/standalone/.next/cache/images
   artifacts:
     baseDirectory: build
     files:
