@@ -6,12 +6,16 @@ frontend:
         - npm ci
     build:
       commands:
+        - echo "Running custom build"
         - npm run build
+        - echo "Configuring image caching"
         - mkdir -p .next/standalone/.next/cache/images
         - touch .next/standalone/.next/cache/images/.keep
-        - ls -la .next/standalone/.next
-        - ls -la .next/standalone/.next/cache
-        - ls -la .next/standalone/.next/cache/images
+        - ls -la .next/standalone/.next >> tree
+        - ls -la .next/standalone/.next/cache >> tree
+        - ls -la .next/standalone/.next/cache/images >> tree
+        - echo "Finishing build commands"
+        - cat tree
   artifacts:
     baseDirectory: .next
     files:

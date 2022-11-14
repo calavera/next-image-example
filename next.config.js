@@ -6,7 +6,6 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'assets.vercel.com',
-        port: '',
         pathname: '/image/upload/**',
       },
     ],
